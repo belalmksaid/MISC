@@ -1,0 +1,19 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        function bitcount(v) {
+            v = v - ((v >> 1) & 0x55555555);                // put count of each 2 bits into those 2 bits
+            v = (v & 0x33333333) + ((v >> 2) & 0x33333333); // put count of each 4 bits into those 4 bits 
+            return ((v + (v >> 4) & 0xF0F0F0F) * 0x1010101) >> 24;
+        }
+        function wordScore(a, b) {
+            
+        }
+    </script>
+</body>
+
+</html>
